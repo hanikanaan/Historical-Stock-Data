@@ -12,7 +12,6 @@ def plotter():
 	df = pd.read_csv(f'{gv.userin}{gv.usercountry}info.csv', parse_dates=True)
 	df = df[['Date', 'Close']]
 	df.head()
-	print(df.dtypes)
 	df = df.astype({'Close': float})
 	df['Date'] = pd.to_datetime(df['Date'])
 	df.index = df['Date']
