@@ -3,7 +3,7 @@ import pandas as pd
 from matplotlib.pylab import rcParams
 import fetcher as f
 import globalvars as gv
-import pictobinary as p2b
+import pictohex as p2h
 
 
 def plotter():
@@ -15,7 +15,6 @@ def plotter():
 	print(df.dtypes)
 	df = df.astype({'Close': float})
 	df['Date'] = pd.to_datetime(df['Date'])
-	print(df.dtypes)
 	df.index = df['Date']
 	plt.plot(df['Close'], label=f'{gv.userin} {gv.usercountry} Close Price History')
 	plt.savefig(f'{gv.userin}{gv.usercountry}plot')
@@ -33,7 +32,7 @@ def plotter():
 
 def main():
 	plotter()
-	p2b.main()
+	p2h.main()
 
 
 if __name__ == '__main__':
