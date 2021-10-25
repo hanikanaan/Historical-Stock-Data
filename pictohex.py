@@ -3,7 +3,6 @@ import globalvars as gv
 
 
 def main():
-	# with open(f'amznusplot.png', 'rb') as f:
 	with open(f'{gv.userin}{gv.usercountry}plot.png', 'rb') as f:
 		content = f.read()
 	gv.img = str(b.hexlify(content))
