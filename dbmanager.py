@@ -16,3 +16,5 @@ def sql_database():
 	PRIMARY KEY("id","SYMBOL")
 	);''')
 	conn.commit()
+
+	conn.close()
